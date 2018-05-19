@@ -1,1 +1,1 @@
-install.sh
+sudo cp ./chelaunch /usr/local/bin/
