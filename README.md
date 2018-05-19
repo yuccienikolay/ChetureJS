@@ -1,2 +1,2 @@
 # ChetureJS
-Modern and useful javascript libruary. From create to track.
+Modern and useful javascript library. From create to track.
