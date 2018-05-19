@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo Hello!
+echo If you want to stop server at post $1, use [Ctrl]+[C]
+
+sudo false
+
+PORT=$1||80
+
+echo
+echo ok
+echo
+
+sudo python3 -m http.server $PORT
