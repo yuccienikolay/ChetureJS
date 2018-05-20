@@ -16,25 +16,25 @@ global.Print = function(argument) {
 	console.log(argument)
 }
 
-global.MakeNormal = function(placeholder) {
-  var normalString = this.ReplaceAll(".", placeholder);
-  var toChange = " .,./.\\.$.@.#.%.^.&.*.(.).-.{.}.[.].=.+.?.<.>.~.;._".split(".");
-  toChange.forEach( function (element, index, array) {
-    normalString = normalString.ReplaceAll(element, placeholder);
+global.MakeNormal = function(AString, Holder="") {
+  let NormalString = AString.split(".").join(Holder);
+  let BadLetters = " .,./.\\.$.@.#.%.^.&.*.(.).-.{.}.[.].=.+.?.<.>.~.;._".split(".");
+  BadLetters.forEach(function (element, index, array) {
+    NormalString = NormalString.split(element).join(Holder);
   });
-  return normalString;
+  return NormalString;
 }
 
 global.ToClassicDate = function(timestamp) {
-  var date = new Date();
+  let date = new Date();
   date.setTime(timestamp);
   date.setHours(date.getHours());
-  var h = date.getHours();
-  var m = date.getMinutes();
-  var s = date.getSeconds();
-  var d = date.getDay();
-  var ms = date.getMonth();
-  var y = date.getFullYear();
+  let h = date.getHours();
+  let m = date.getMinutes();
+  let s = date.getSeconds();
+  let d = date.getDay();
+  let ms = date.getMonth();
+  let y = date.getFullYear();
   m = CheckTime(m);
   s = CheckTime(s);
   return h + ":" + m + ":" + s + " " + d + "." + ms + "." + y;
@@ -51,10 +51,10 @@ function function_name(argument) {
 
 // import
 
-import {user, build} from './Chetrack.js';
+import {Chetrack} from './Chetrack.js';
+global.Chetrack = Chetrack;
 
 
 // Test
 
-Print(user());
-Print(build);
+Print(Chetrack.getID());
