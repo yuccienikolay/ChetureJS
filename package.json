@@ -7,23 +7,36 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "webpack --mode development",
-    "watch": "webpack --watch",
-    "build": "webpack --mode production"
+    "dev": "webpack --progress --mode development",
+    "watch": "webpack --progress --watch --mode development",
+    "build": "webpack --progress --mode production"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yuccienikolay/ChetureJS.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Kiselev Nikolay",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yuccienikolay/ChetureJS/issues"
   },
   "homepage": "https://github.com/yuccienikolay/ChetureJS#readme",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
     "webpack": "^4.0.0-beta.3",
     "webpack-cli": "^2.1.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "vue": "^2.5.16"
   }
 }
